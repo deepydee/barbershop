@@ -13,11 +13,12 @@ html, body
 	height: 100%
 
 body
-	font-size: 16px
+	font-size: 14px
 	min-width: 320px
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
+	text-transform: uppercase
 	overflow-x: hidden
 	input, textarea
 		border: #666 1px solid
@@ -36,6 +37,105 @@ body
 
 .text-center
 	text-align: center
+
+.top-line
+	position: relative
+	height: 72px
+	background-color: #000000
+
+.main-menu
+	text-align: center
+	padding: 0 100px
+	width: 100%
+	ul, li
+		margin: 0
+		padding: 0
+		list-style-type: none
+		li
+			display: inline-block
+			position: relative
+			a	
+				display: block
+				text-decoration: none
+				color: #ffffff
+				font-size: 16px
+				font-weight: bold
+				padding: 23px 20px
+				transition: background-color .25s ease
+				&:hover
+					background-color: $gray
+			&.active
+				span
+					display: block
+					position: relative
+					padding: 23px 20px
+					color: #ffffff
+					font-size: 16px
+				font-weight: bold
+				&::after
+					position: absolute
+					content: ''
+					left: 20px
+					right: 20px
+					bottom: 0
+					width: auto
+					height: 5px
+					background-color: #ffffff
+
+.entry
+	display: inline-block
+	position: absolute
+	right: 0
+	top: 0
+	a
+		display: block
+		color: #ffffff
+		font-size: 16px
+		font-weight: bold
+		padding: 23px 20px
+		padding-left: 50px
+		text-decoration: none
+		transition: background-color .25s ease
+		&:hover
+			background-color: $gray
+			&::before
+				opacity: 1
+		&::before
+			content: ''
+			position: absolute
+			top: 18px
+			right: 55px
+			height: 30px
+			width: 30px
+			background-image: url(../img/sprites.png)
+			background-position: 0 -200px
+			opacity: 0.3
+			transition: opacity .25s ease
+				
+.mobile-menu-button
+	color: #ffffff
+	text-align: center
+	cursor: pointer
+	line-height: 72px
+	font-size: 16px
+	text-transform: uppercase
+	font-weight: bold
+	white-space: nowrap
+	display: none
+	&:hover
+		color: $accent
+
+.mobile-menu
+	display: none
+	background-color: lighten(#000, 3%)
+	border-top: 1px solid lighten(#000, 5%)
+	.top-menu
+		display: block
+		li
+			display: block
+			a
+				padding: 0
+				line-height: 45px
 
 
 @import "media" // Always at the end
