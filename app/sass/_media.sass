@@ -5,23 +5,82 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
-
+	.adv-item
+		margin-bottom: 55px
+		.h2
+			margin-bottom: 55px
+		.square
+			top: 63px
+			left: 135px
+		
 // ≥992px
 +media-breakpoint-down(md)
 	
 	.main-menu
 		display: none
 		padding: 20px
+		ul 
+			li
+				&.active
+					&::after
+						display: none
 
 	.mobile-menu-button
 		display: block
 
+	.adv-item
+		margin-bottom: 55px
+		.h2
+			margin-bottom: 55px
+		.square
+			top: 63px
+			left: 95px
+
+	.block-1 
+		background:
+			image: url(../img/content-background.jpg)
+			position: center
+			repeat: repeat
+		padding: $gutter $gutter
+
+		.button-wrapper
+			text-align: center
+			margin: 0
+			padding: 0
+			.all-news-button
+				display: inline-block
+				margin-bottom: $gutter
+
+	.section-gallery
+		margin: $gutter 0
 // ≥768px
 +media-breakpoint-down(sm)
+
+	.adv-item
+		margin-bottom: 35px
+		.h2
+			margin-bottom: 35px
+			font-size: 25px
+		.square
+			width: 10px
+			height: 10px
+			top: 50px
+			left: 248px
 
 // ≥576px
 +media-breakpoint-down(xs)
 
+	.adv-item
+		margin: 5px 10px
+		.h2
+			margin-bottom: 0
+			font-size: 25px
+		.square
+			display: none
+	
+	.block-1 
+		.h2
+			font-size: 25px
 
 /*==========  Mobile First  ==========*/
 

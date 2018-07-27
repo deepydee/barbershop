@@ -13,13 +13,17 @@ html, body
 	height: 100%
 
 body
+	margin: 0
+	padding: 0
 	font-size: 14px
 	min-width: 320px
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
 	text-transform: uppercase
+	color: #000000
 	overflow-x: hidden
+	background-color: #000000
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -37,6 +41,16 @@ body
 
 .text-center
 	text-align: center
+
+.h1, .h2, .h3
+	font-size: 30px
+	font-weight: bold
+	text-transform: uppercase
+
+.ishome
+	background-image: url(../img/index-backgound.jpg)
+	background-repeat: no-repeat
+	background-position: center top
 
 .top-line
 	position: relative
@@ -136,6 +150,105 @@ body
 			a
 				padding: 0
 				line-height: 45px
+
+.top-logo
+	position: relative
+	display: block
+	width: 368px
+	height: auto
+	margin: 58px auto
+
+.top-line-logo
+	position: absolute
+	top: 22px
+	left: 22px
+	margin-right: 22px
+	img
+		height: 23px
+		width: auto
+
+.inverse
+	color: #ffffff
+
+.adv-item
+	position: relative
+	margin-bottom: 85px
+	text-align: center
+	.h2
+		margin-bottom: 85px
+	.square
+		width: 20px
+		height: 20px
+		position: absolute
+		top: 80px
+		left: 165px
+		background-color: #ffffff
+		transform: rotate(45deg)
+
+.block-1
+	position: relative
+	background:
+		color: #ffffff 
+		image: url(../img/column-delimiter.png), url(../img/content-background.jpg)
+		position: center, center
+		repeat: no-repeat, repeat
+	padding-top: 56px
+	padding-bottom: 56px
+	.all-news-button
+		display: inline-block
+	.news-wrapper
+		margin: $gutter 0
+
+.news-item
+	margin: 0
+	padding: 0
+	font-weight: bold
+
+.news-date
+	font-size: 14px
+	text-transform: lowercase
+	margin-bottom: $gutter/2
+
+.button
+	display: inline-block
+	background-color: #000000
+	color: #ffffff
+	padding: 16px 35px
+	font-size: 14px
+	font-weight: bold
+	transition: all .25s ease
+	&:hover
+		color: #ffffff
+		background-color: $brown
+		text-decoration: none
+	
+.button-gallery-prev, .button-gallery-next
+	display: inline-block
+	text-align: center
+	cursor: pointer
+	width: 100%
+
+.section-gallery
+	margin: $gutter 0
+
+.fotorama
+	&__nav-wrap
+		display: none
+	&__arr--prev, &__arr--next
+	&__arr--prev
+		&::before
+			position: absolute
+			font-family: fontawesome
+			content: '\f060'
+			color: #ffffff
+			font-size: 17px
+			left: 14px
+	&__arr--next
+		&::before
+			font-family: fontawesome
+			content: '\f061'
+			color: #ffffff
+			font-size: 17px
 
 
 @import "media" // Always at the end

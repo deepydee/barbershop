@@ -15,6 +15,18 @@ $(function() {
 	$('.mobile-menu').stop().slideToggle();
 	});
 
+	var $fotoramaDiv = $('#fotorama').fotorama();
+	var fotorama = $fotoramaDiv.data('fotorama');
+	
+
+	$('.button-gallery-prev').click(function() {
+		fotorama.show('<');
+	});
+
+	$('.button-gallery-next').click(function() {
+		fotorama.show('>');
+	});
+
 
 
 });
