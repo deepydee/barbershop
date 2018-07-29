@@ -27,6 +27,35 @@ $(function() {
 		fotorama.show('>');
 	});
 
+/* 	if (window.matchMedia('all and (max-width: 576px)').matches) {
+		fotorama.setOptions({
+			arrows: true
+		 });
+	} else {
+		fotorama.setOptions({
+			arrows: false
+		 });
+	} */
+
+	//E-mail Ajax Send
+	$("form.callback").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			$(th).find('.success').addClass('active').css('display', 'flex').hide().fadeIn();
+			setTimeout(function() {
+				$(th).find('.success').removeClass('active').fadeOut();
+				// Done Functions
+				th.trigger("reset");
+			}, 3000);
+		});
+		return false;
+	});
+	 
+
 
 
 });

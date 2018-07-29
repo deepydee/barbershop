@@ -24,13 +24,6 @@ body
 	color: #000000
 	overflow-x: hidden
 	background-color: #000000
-	input, textarea
-		border: #666 1px solid
-		outline: none
-		&:focus:required:invalid
-			border-color: red
-		&:required:valid
-			border-color: green
 
 .img-responsive
 	display: block
@@ -172,7 +165,7 @@ body
 
 .adv-item
 	position: relative
-	margin-bottom: 85px
+	margin-bottom: 50px
 	text-align: center
 	.h2
 		margin-bottom: 85px
@@ -185,13 +178,14 @@ body
 		background-color: #ffffff
 		transform: rotate(45deg)
 
-.block-1
+.block
 	position: relative
 	background:
 		color: #ffffff 
 		image: url(../img/column-delimiter.png), url(../img/content-background.jpg)
 		position: center, center
 		repeat: no-repeat, repeat
+	margin-top: 35px
 	padding-top: 56px
 	padding-bottom: 56px
 	.all-news-button
@@ -209,6 +203,11 @@ body
 	text-transform: lowercase
 	margin-bottom: $gutter/2
 
+.button-wrapper
+	//position: absolute
+	//bottom: 0
+	//left: $gutter/2
+
 .button
 	display: inline-block
 	background-color: #000000
@@ -216,6 +215,10 @@ body
 	padding: 16px 35px
 	font-size: 14px
 	font-weight: bold
+	text-align: center
+	text-transform: uppercase
+	border: none
+	outline: none
 	transition: all .25s ease
 	&:hover
 		color: #ffffff
@@ -226,7 +229,8 @@ body
 	display: inline-block
 	text-align: center
 	cursor: pointer
-	width: 100%
+	width: 100%	
+	user-select: none
 
 .section-gallery
 	margin: $gutter 0
@@ -249,6 +253,54 @@ body
 			content: '\f061'
 			color: #ffffff
 			font-size: 17px
+
+.s-block-2
+	.button
+		margin-right: $gutter
+		&:last-child
+			margin-right: 0
+		margin-top: 50px
+
+.callback
+	position: relative
+	p
+		font-weight: bold
+		margin-bottom: 35px
+	.button
+		width: 100%
+		margin: 0
+
+.success
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	text-transform: uppercase
+	font-weight: bold
+	display: none
+	z-index: 10
+	span
+		margin: auto
+	& ~ *
+		transition: all .5s ease
+	&.active
+		& ~ *
+			opacity: .5
+			filter: blur(10px)
+
+input
+	background-color: transparent
+	border: 2px solid #000
+	outline: none
+	padding: 14px 6px 14px 14px
+	display: inline-block
+	font-size: 14px
+	font-weight: bold
+	margin-right: $gutter
+	margin-bottom: $gutter
+	&:nth-child(2n)
+		margin-right: 0
 
 
 @import "media" // Always at the end

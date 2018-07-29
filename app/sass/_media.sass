@@ -12,6 +12,18 @@
 		.square
 			top: 63px
 			left: 135px
+
+	.s-block-2
+		.button
+			display: inline-block
+			padding: 16px 22px
+			margin-top: $gutter/2
+			margin-right: $gutter
+			&:last-child
+				margin-right: 0
+		input
+			width: 100%
+			margin-bottom: $gutter/2
 		
 // ≥992px
 +media-breakpoint-down(md)
@@ -36,7 +48,11 @@
 			top: 63px
 			left: 95px
 
-	.block-1 
+	.s-block-2
+		.news-wrapper
+			margin-top: $gutter/2
+
+	.block 
 		background:
 			image: url(../img/content-background.jpg)
 			position: center
@@ -57,7 +73,7 @@
 +media-breakpoint-down(sm)
 
 	.adv-item
-		margin-bottom: 35px
+		margin-bottom: 15px
 		.h2
 			margin-bottom: 35px
 			font-size: 25px
@@ -77,10 +93,21 @@
 			font-size: 25px
 		.square
 			display: none
-	
-	.block-1 
+	.s-block-1
 		.h2
 			font-size: 25px
+	.s-block-2
+		.block 
+			margin-top: -$gutter*2
+			.h2
+				font-size: 25px
+
+	.s-block-2
+		.button
+			width: 100%
+
+	.button-gallery-prev, .button-gallery-next
+		display: none
 
 /*==========  Mobile First  ==========*/
 
