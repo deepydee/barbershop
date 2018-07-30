@@ -224,7 +224,7 @@ body
 		color: #ffffff
 		background-color: $brown
 		text-decoration: none
-	
+
 .button-gallery-prev, .button-gallery-next
 	display: inline-block
 	text-align: center
@@ -301,6 +301,53 @@ input
 	margin-bottom: $gutter
 	&:nth-child(2n)
 		margin-right: 0
+
+.main-footer
+	background-color: $gray
+	color: #ffffff
+	font-size: 14px
+	font-weight: bold
+	margin-top: 65px
+	padding: 64px 0
+
+
+.footer-column
+	p, a
+		display: block
+		margin-bottom: 12px
+	a
+		color: #ffffff
+		text-decoration: underline
+		&.button
+			text-decoration: none
+	.button
+		&:hover
+			background-color: #ffffff
+			color: #000000
+
+.footer-social
+	.soc
+		margin: auto
+		ul, li
+			margin: 0
+			padding: 0
+			list-style-type: none
+		li
+			display: inline-block
+			margin-right: 7px
+			a
+				height: 44px
+				width: 44px
+				text-align: center
+				line-height: 44px
+				color: #ffffff
+				font-size: 17px
+				display: block
+				background-color: #000000
+				transition: color .5s ease, background-color .5s ease
+				&:hover
+					color: #000000
+					background-color: #ffffff
 
 
 @import "media" // Always at the end
