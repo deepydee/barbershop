@@ -7,7 +7,7 @@
 
 ::selection
 	background-color: $accent
-	color: #fff
+	color: $brown
 
 html, body
 	height: 100%
@@ -35,7 +35,7 @@ body
 .text-center
 	text-align: center
 
-.h1, .h2, .h3
+.h1, .h2, .h3, legend
 	font-size: 30px
 	font-weight: bold
 	text-transform: uppercase
@@ -236,6 +236,8 @@ body
 	margin: $gutter 0
 
 .fotorama
+	&__wrap
+		border: 7px solid #fff
 	&__nav-wrap
 		display: none
 	&__arr--prev, &__arr--next
@@ -349,5 +351,140 @@ input
 					color: #000000
 					background-color: #ffffff
 
+.mfp-iframe-scaler
+	iframe
+		background-color: #ffffff
+		border: 7px solid #fff
+		box-shadow: none
+
+.mfp-iframe-holder 
+	.mfp-close
+		font-size: 53px
+		top: -7px
+		right: -44px
+
+.mfp-close
+	font-size: 53px
+	top: -7px
+	right: -44px
+
+.mfp-close-btn-in
+	.mfp-close
+		color: #ffffff
+
+.popup-form
+	background-color: #ffffff
+	color: #000
+	margin: 0 auto
+	z-index: 20
+	position: relative
+	padding: 56px 80px
+	p, a, label
+		font-weight: bold
+	a
+		display: inline-block
+		float: right
+		text-decoration: underline
+		color: #000000
+	p
+		margin: 28px 0 16px 0
+	input
+		&[type="text"], &[type="tel"], &[type="email"], 
+			border: 2px solid #000
+			padding: 15px
+			width: 100%
+			margin-bottom: 10px
+		&[type="checkbox"]
+			width: 20px
+			height: 20px
+			border-radius: 0
+			outline: none
+		&::placeholder
+			text-transform: uppercase
+			font-weight: bold
+			color: #000000
+	textarea
+		border: 2px solid #000
+		padding: 15px
+		width: 100%
+		margin-bottom: 10px
+		text-transform: uppercase
+		&::placeholder
+			text-transform: uppercase
+			font-weight: bold
+			color: #000000
+	.button
+		width: 100%
+
+.checkbox 
+	input
+		position: absolute
+		z-index: -1
+		opacity: 0
+		margin: 10px 0 0 20px
+		&:checked + .checkbox-text
+			&::after
+				opacity: 1
+		&:focus + .checkbox-text
+			&::before
+				//box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,0,.7)
+			
+.checkbox-text
+	position: relative
+	display: inline-block
+	padding: 0 0 0 33px
+	cursor: pointer
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 20px
+		height: 20px
+		border: 2px solid #000
+		background: transparent
+		transition: .2s
+	&::after
+		font-family: fontawesome
+		font-weight: normal
+		content: '\f00d'
+		font-size: 20px
+		position: absolute
+		top: -7px
+		left: 2px
+		opacity: 0
+		transition: opacity .2s ease
+
+.top
+	position: fixed
+	bottom: 25px
+	right: -100px
+	background-color: lighten($gray, 20%)
+	z-index: 120
+	color: #fff
+	font-size: 26px
+	width: 44px
+	height: 44px
+	text-align: center
+	line-height: 44px
+	cursor: pointer
+	transition: all .3s ease
+	opacity: 0.5
+	&:hover
+		color: #000
+		background-color: $accent
+		opacity: 1
+	&.active
+		right: 25px
+
+.lk-form
+	max-width: 460px
+
+.callback-form
+	max-width: 540px
+	.button
+		display: inline-block
+		padding: 16px 16px
+		margin-bottom: 10px
 
 @import "media" // Always at the end

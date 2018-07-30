@@ -41,7 +41,7 @@
 		</ul>
 	</nav>
 	<div class="entry">
-		<a href="#">Вход</a>
+		<a href="#lk" class="entry-popup-link">Вход</a>
 	</div>
 </header>
 
@@ -135,8 +135,8 @@
 							 ПН - ПТ: с 10:00 до 22:00<br>
 							 СБ - ВС: с 10:00 до 19:00</p>
 					</div>
-					<a href="#" class="button">Как проехать</a>
-					<a href="#" class="button">Обратная связь</a>
+					<a href="#map" class="button map">Как проехать</a>
+					<a href="#callback" class="callback button">Обратная связь</a>
 				</div>
 			</div>
 			<div class="col-lg-4 offset-lg-2">
@@ -201,12 +201,36 @@
 	</div>
 </footer>
 
+<form id="lk" class="popup-form lk-form mfp-hide">
+	<div class="h2">Личный кабинет</div>
+	<p>Введите пожалуйста свой логин и пароль</p>
+	<input type="text" name="login" placeholder="Логин" required>
+	<input type="text" name="pwd" placeholder="Пароль" required>
+	<label class="checkbox"><input type="checkbox" checked><span class="checkbox-text">Запомните меня</span></label>
+	<a href="#">Я забыл пароль!</a>
+	<button class="button">Войти</button>
+</form>
 
-
-
-
+<form id="callback" class="callback popup-form callback-form mfp-hide" method="post" enctype="multipart/form-data">
+	<div class="success"><span>Спасибо за обращение!</span></div>
+	<!-- Hidden Required Fields -->
+	<input type="hidden" name="project_name" value="BORODINSKY">
+	<input type="hidden" name="admin_email" value="synthex@bk.ru">
+	<input type="hidden" name="form_subject" value="Обращение с сайта BORODINSKY">
+	<!-- END Hidden Required Fields -->
+	<input type="hidden" name="Page" value="">
+	<fieldset>
+		<legend>Оставить сообщение</legend>
+		<label for="name">Имя</label><br><input type="text" name="name" placeholder="Ваше Имя" required>
+		<label for="phone">Номер телефона</label><br><input type="tel" name="phone" placeholder="Ваш контактный номер телефона" required>
+		<label for="email">E-mail</label><br><input type="email" name="email" placeholder="Укажите Ваш e-mail адрес">
+		<label for="textarea">Текст сообщения<br><textarea name="textarea" id="textarea" cols="88" rows="8" placeholder="Текст вашего сообщения"></textarea></label>
+		<button class="button">Отправить</button>
+		<input type="reset" value="Сбросить" class="button"> 
+	</fieldset>
+</form>
 
 	<script src="js/scripts.min.js"></script>
-
+	<div class="top" title="Наверх"><i class="fa fa-angle-double-up"></i></div>
 </body>
 </html>
