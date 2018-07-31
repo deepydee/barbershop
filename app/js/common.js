@@ -1,7 +1,7 @@
 $(function() {
 
 	$('.main-menu a').click(function(event) {
-		event.preventDefault();
+		//event.preventDefault();
 		//var clicked = $(this).attr('href');
 		//var needElem = 'a[href="'+clicked+'"]';
 		$('.main-menu .active').removeClass('active');
