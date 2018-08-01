@@ -32,6 +32,9 @@
 			padding: 16px 25px 16px 25px
 			.button
 					padding: 16px 20px
+
+	.price-table
+		margin-bottom: 180px
 		
 // ≥992px
 +media-breakpoint-down(md)
@@ -91,6 +94,19 @@
 		.button
 			margin: $gutter 0
 
+	.s-price
+		.big-heading
+			margin-top: 35px
+			margin-bottom: 45px
+			.h1
+				font-size: 36px
+				line-height: 36px
+		ul
+			margin-bottom: 36px
+
+	.price-table
+		margin-bottom: 36px
+
 // ≥768px
 +media-breakpoint-down(sm)
 
@@ -135,6 +151,16 @@
 		padding: 36px 40px
 		p
 			margin: 16px 0
+
+	.s-price
+		.big-heading
+			margin-top: 25px
+			margin-bottom: 35px
+			&::after
+				display: none
+			.h1
+				font-size: 30px
+				line-height: 30px
 
 
 /*==========  Mobile First  ==========*/

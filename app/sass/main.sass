@@ -61,6 +61,13 @@ body
 		li
 			display: inline-block
 			position: relative
+			span
+				display: block
+				padding: 23px 20px
+				color: #ffffff
+				font-size: 16px
+				font-weight: bold
+				cursor: pointer
 			a	
 				display: block
 				text-decoration: none
@@ -72,13 +79,6 @@ body
 				&:hover
 					background-color: $gray
 			&.active
-				span
-					display: block
-					position: relative
-					padding: 23px 20px
-					color: #ffffff
-					font-size: 16px
-				font-weight: bold
 				&::after
 					position: absolute
 					content: ''
@@ -490,12 +490,12 @@ input
 
 .ispage
 	background:
-		color: #ffffff 
+		color: #f8f3f0
 		image: url(../img/content-background.jpg)
 		position: center
 		repeat: repeat
 
-.shop-header
+.page-header
 	.h1
 		margin-top: $gutter*2
 		margin-bottom: $gutter
@@ -508,6 +508,9 @@ input
 		position: relative
 		user-select: none
 		margin-right: 40px
+		&.current
+			font-weight: bold
+			color: #aba9a7
 		a
 			display: block
 			text-decoration: none
@@ -515,6 +518,8 @@ input
 			cursor: pointer
 			font-size: 14px
 			font-weight: bold
+			&:hover
+				text-decoration: underline
 			&::after
 				content: ''
 				position: absolute
@@ -550,7 +555,7 @@ input
 	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2)
 	margin-bottom: $gutter
 	&:hover
-		box-shadow: 0 0 22px rgba(0,0,0,.2)
+		box-shadow: 5px 5px 25px rgba(0,0,0,.3)
 		z-index: 2
 	figcaption
 		margin: 18px
@@ -598,4 +603,77 @@ input
 			&.active
 				background-color: #ffffff
 				color: #000000
+
+.s-price
+	.big-heading
+		margin-top: 55px
+		margin-bottom: 65px
+		text-align: center
+		&::after
+			position: relative
+			content: ''
+			display: block
+			border-bottom: 2px solid #000000
+			top: -25px
+			z-index: 1
+		.h1
+			position: relative
+			display: inline
+			font-size: 48px
+			line-height: 48px
+			text-align: center
+			margin: 0
+			padding: 0 25px
+			z-index: 2
+			background:
+				color: #f8f3f0
+				image: url(../img/content-background.jpg)
+				position: center
+				repeat: repeat
+
+.s-price
+	.h2
+		margin-bottom: 36px
+		font-size: 24px
+	ul, li
+		margin: 0
+		padding: 0
+		list-style-type: none
+	ul
+		margin-bottom: 70px
+	li
+		position: relative
+		margin-bottom: 27px
+		margin-left: 20px
+		font-size: 14px
+		font-weight: bold
+		&::before
+			content: ''
+			position: absolute
+			height: 8px
+			width: 8px
+			background-color: #000000
+			top: 6px
+			left: -20px
+			transform: rotate(45deg)
+	p
+		font-weight: bold
+		font-size: 14px
+
+
+.price-table
+	margin-bottom: 144px
+	width: 100%
+	td
+		font-size: 14px
+		font-weight: bold
+		width: 50%
+		border: 2px solid #000
+		padding: 16px
+		&.price-data
+			text-align: center
+
+
+
+
 @import "media" // Always at the end
